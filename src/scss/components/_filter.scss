@@ -1,0 +1,23 @@
+@use "helpers" as *;
+
+.filter {
+  padding-block: rem(18);
+  display: flex;
+  justify-content: flex-end;
+  &__buttons {
+    display: flex;
+    align-items: center;
+    column-gap: rem(21);
+  }
+  &__button {
+    display: flex;
+    .icon {
+      fill: #C8C8C8;
+    }
+    &.active, &:hover {
+      .icon {
+        fill: #3D8EDA;
+      }
+    }
+  }
+}

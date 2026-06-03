@@ -1,0 +1,110 @@
+@use "helpers" as *;
+.cards {
+  &--grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(#{fluid(203, 150)},max-content));
+    grid-gap: rem(8);
+    justify-content: center;
+    .card {
+      max-width: rem(203);
+    }
+  }
+  &--list {
+    display: flex;
+    flex-direction: column;
+    gap: rem(8);
+    .card {
+      display: flex;
+      &__image {
+        @include square(#{rem(86)});
+        display: flex;
+        flex-shrink: 0;
+        img {
+          height: 100%;
+          width: 100%;
+        }
+      }
+      &__content {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: fluid(16, 15) fluid(30, 16);
+      }
+      &__info {
+        width: 50%;
+        column-gap: rem(20);
+        @include mobile-s {
+          width: 100%;
+        }
+        .card__row {
+          &--views {
+            flex-direction: row;
+            column-gap: rem(19);
+          }
+        }
+      }
+      &__uploaded {
+        @include mobile-s {
+          display: none;
+        }
+      }
+    }
+  }
+}
+.card {
+  width: 100%;
+  &__image {
+    width: 100%;
+    display: block;
+    img {
+      object-fit: cover;
+    }
+  }
+  &__content {
+    padding: rem(12);
+    background-color: var(--color-light);
+  }
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    column-gap: rem(10);
+    .card__row {
+      &--text {
+        font-size: em(16);
+        font-weight: 500;
+        margin-bottom: rem(7);
+      }
+      &--views {
+        display: flex;
+        flex-direction: column;
+        gap: rem(6);
+      }
+      &--view {
+        display: flex;
+        align-items: center;
+        column-gap: rem(6);
+        .icon {
+          @include square(#{rem(18)})
+        }
+        span {
+          font-size: em(14);
+          font-weight: 500;
+        }
+      }
+    }
+  }
+  &__uploaded {
+    margin-top: rem(24);
+    display: flex;
+    justify-content: space-between;
+    column-gap: rem(10);
+    &--text {
+      font-size: em(14);
+      font-weight: 500;
+    }
+    &--date {
+      font-size: em(12);
+      font-weight: 500;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+@use "config/normalize";
+@use "config/fonts";
+
+@use "config/root";
+
+@use "config/scrollbar";
+
+@use "config/base";
+
+@use "config/common";
+
+@use "components/button";
+@use "components/datepicker";
+@use "components/card";
+@use "components/filter";
+
+//icons
+@use "config/icon";
+
+//forms
+@use "config/form";
+
+@use "header";
+@use "footer";

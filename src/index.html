@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="eng">
+@@include('html/head.html', {
+'title': 'Main page'
+})
+<body>
+<div class="wrapper">
+	@@include('html/header.html')
+	<main class="page">
+		<div class="catalog">
+			<div class="container">
+				<div class="filter">
+					<div class="filter__buttons">
+						<button type="button" class="filter__button active" id="view-grid" data-view="grid">
+							<svg class="icon" width="22" height="22" viewBox="0 0 22 22"  fill="#C8C8C8" xmlns="http://www.w3.org/2000/svg">
+								<rect width="6" height="6" />
+								<rect x="8" width="6" height="6" />
+								<rect x="16" width="6" height="6" />
+								<rect y="8" width="6" height="6" />
+								<rect y="16" width="6" height="6" />
+								<rect x="8" y="8" width="6" height="6" />
+								<rect x="8" y="16" width="6" height="6" />
+								<rect x="16" y="8" width="6" height="6" />
+								<rect x="16" y="16" width="6" height="6" />
+							</svg>
+
+						</button>
+						<button type="button" class="filter__button" id="view-list" data-view="list">
+							<svg class="icon" width="24" height="22" viewBox="0 0 24 22"  fill="#C8C8C8" xmlns="http://www.w3.org/2000/svg">
+								<rect width="6" height="6" />
+								<rect y="8" width="6" height="6" />
+								<rect y="16" width="6" height="6" />
+								<rect x="9" y="10" width="15" height="2" />
+								<rect x="9" y="18" width="15" height="2" />
+								<rect x="9" y="2" width="15" height="2" />
+							</svg>
+
+						</button>
+					</div>
+				</div>
+				<div class="cards cards--grid">
+					@@include('blocks/card.html', {
+					'card-image': 'card-1.webp',
+					})
+					@@include('blocks/card.html', {
+					'card-image': 'card-2.webp',
+					})
+					@@include('blocks/card.html', {
+					'card-image': 'card-3.webp',
+					})
+					@@include('blocks/card.html', {
+					'card-image': 'card-4.webp',
+					})
+					@@include('blocks/card.html', {
+					'card-image': 'card-5.webp',
+					})
+					@@include('blocks/card.html', {
+					'card-image': 'card-6.webp',
+					})
+					@@include('blocks/card.html', {
+					'card-image': 'card-7.webp',
+					})
+					@@include('blocks/card.html', {
+					'card-image': 'card-8.webp',
+					})
+				</div>
+				<div class="load-more">
+					<button type="button" class="btn btn__primary">LOAD MORE</button>
+				</div>
+			</div>
+		</div>
+	</main>
+	@@include('html/footer.html')
+</div>
+</body>
+</html>
